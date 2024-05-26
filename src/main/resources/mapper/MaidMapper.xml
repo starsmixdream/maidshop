@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qqb.maidshop.mapper.MaidMapper">
+
+    <resultMap id="BaseResultMap" type="com.qqb.maidshop.model.Maid">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="name" column="name" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="INTEGER"/>
+            <result property="occupation" column="occupation" jdbcType="VARCHAR"/>
+            <result property="provenance" column="provenance" jdbcType="VARCHAR"/>
+            <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,gender,
+        occupation,provenance,avatar
+    </sql>
+</mapper>

@@ -1,0 +1,32 @@
+server:
+  port: 8090
+spring:
+  profiles:
+    active: dev
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/maidshop
+    username: root
+    password: 123456
+  application:
+    name: maidshop
+  session:
+    timeout: 86400
+    store-type: redis
+  redis:
+    port: 6379
+    host: localhost
+    database: 0
+    password: 123456
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete # 逻辑删除的实体字段名
+      logic-delete-value: 1 # 逻辑已删除值(默认1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认0)
+
+animation:
+  recommend-num: 2
